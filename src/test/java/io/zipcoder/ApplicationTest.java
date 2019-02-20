@@ -58,14 +58,15 @@ public class ApplicationTest {
         byteArrInStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(byteArrInStream);
 
-        String expectedOutput = String.format("How many pets do you own?\nWhat is your pet name?\nHow old is your pet?\n" +
-                "What type is your pet?\nWhat is your pet name?\nHow old is your pet?\nWhat type is your pet?\n" +
-                "What is your pet name?\nHow old is your pet?\nWhat type is your pet?\n%s %s\n%s %s\n%s %s\n",
+        String expectedOutput = String.format("%s %s\n%s %s\n%s %s\n",
                 petName3, "Snap", petName1, "Bark", petName2, "Meow");
 
         // When
         Application application = new Application();
         application.start();
+
+        byteArrOutStream.reset();
+
         application.printListByName();
 
         String actualOutput = byteArrOutStream.toString();
@@ -96,14 +97,15 @@ public class ApplicationTest {
         byteArrInStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(byteArrInStream);
 
-        String expectedOutput = String.format("How many pets do you own?\nWhat is your pet name?\nHow old is your pet?\n" +
-                        "What type is your pet?\nWhat is your pet name?\nHow old is your pet?\nWhat type is your pet?\n" +
-                        "What is your pet name?\nHow old is your pet?\nWhat type is your pet?\n%s %s\n%s %s\n%s %s\n",
+        String expectedOutput = String.format("%s %s\n%s %s\n%s %s\n",
                 petName1, "Bark", petName2, "Meow", petName3, "Snap");
 
         // When
         Application application = new Application();
         application.start();
+
+        byteArrOutStream.reset();
+
         application.printListByName();
 
         String actualOutput = byteArrOutStream.toString();
@@ -134,14 +136,15 @@ public class ApplicationTest {
         byteArrInStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(byteArrInStream);
 
-        String expectedOutput = String.format("How many pets do you own?\nWhat is your pet name?\nHow old is your pet?\n" +
-                        "What type is your pet?\nWhat is your pet name?\nHow old is your pet?\nWhat type is your pet?\n" +
-                        "What is your pet name?\nHow old is your pet?\nWhat type is your pet?\n%s %s\n%s %s\n%s %s\n",
+        String expectedOutput = String.format("%s %s\n%s %s\n%s %s\n",
                 petName3, "Snap", petName2, "Meow", petName1, "Bark");
 
         // When
         Application application = new Application();
         application.start();
+
+        byteArrOutStream.reset();
+
         application.printListByName();
 
         String actualOutput = byteArrOutStream.toString();
@@ -172,14 +175,15 @@ public class ApplicationTest {
         byteArrInStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(byteArrInStream);
 
-        String expectedOutput = String.format("How many pets do you own?\nWhat is your pet name?\nHow old is your pet?\n" +
-                        "What type is your pet?\nWhat is your pet name?\nHow old is your pet?\nWhat type is your pet?\n" +
-                        "What is your pet name?\nHow old is your pet?\nWhat type is your pet?\n%s %s\n%s %s\n%s %s\n",
+        String expectedOutput = String.format("%s %s\n%s %s\n%s %s\n",
                 petName2, "Meow", petName3, "Bark", petName1, "Snap");
 
         // When
         Application application = new Application();
         application.start();
+
+        byteArrOutStream.reset();
+
         application.printListByType();
 
         String actualOutput = byteArrOutStream.toString();
@@ -210,14 +214,15 @@ public class ApplicationTest {
         byteArrInStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(byteArrInStream);
 
-        String expectedOutput = String.format("How many pets do you own?\nWhat is your pet name?\nHow old is your pet?\n" +
-                        "What type is your pet?\nWhat is your pet name?\nHow old is your pet?\nWhat type is your pet?\n" +
-                        "What is your pet name?\nHow old is your pet?\nWhat type is your pet?\n%s %s\n%s %s\n%s %s\n",
+        String expectedOutput = String.format("%s %s\n%s %s\n%s %s\n",
                 petName3, "Meow", petName1, "Bark", petName2, "Snap");
 
         // When
         Application application = new Application();
         application.start();
+
+        byteArrOutStream.reset();
+
         application.printListByType();
 
         String actualOutput = byteArrOutStream.toString();
@@ -248,14 +253,15 @@ public class ApplicationTest {
         byteArrInStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(byteArrInStream);
 
-        String expectedOutput = String.format("How many pets do you own?\nWhat is your pet name?\nHow old is your pet?\n" +
-                        "What type is your pet?\nWhat is your pet name?\nHow old is your pet?\nWhat type is your pet?\n" +
-                        "What is your pet name?\nHow old is your pet?\nWhat type is your pet?\n%s %s\n%s %s\n%s %s\n",
+        String expectedOutput = String.format("%s %s\n%s %s\n%s %s\n",
                 petName1, "Meow", petName2, "Bark", petName3, "Snap");
 
         // When
         Application application = new Application();
         application.start();
+
+        byteArrOutStream.reset();
+
         application.printListByType();
 
         String actualOutput = byteArrOutStream.toString();
